@@ -19,6 +19,7 @@
     </properties>
 
     <repositories>
+        <!-- PaperMC Repository -->
         <repository>
             <id>papermc-repo</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
@@ -27,15 +28,17 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
     </repositories>
 
     <dependencies>
+        <!-- Paper API Snapshot untuk versi 26.x -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>26.1.2-R0.1-SNAPSHOT</version>
+            <version>26.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
