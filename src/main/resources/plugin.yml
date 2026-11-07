@@ -1,0 +1,25 @@
+name: Dropspawner
+version: 1.0.0
+main: com.rabusoore.dropspawner.DropspawnerPlugin
+api-version: '26.1'
+authors: [Rabusoore]
+description: Drops mob spawner items on direct player kill.
+
+commands:
+  dropspawner:
+    description: Perintah utama untuk manajemen plugin Dropspawner.
+    usage: /dropspawner <reload|chance|type|enable|disable|blacklist|info>
+    permission: dropspawner.admin
+    aliases: [dspawner]
+
+permissions:
+  dropspawner.admin:
+    description: Memberikan akses penuh ke semua fitur administratif Dropspawner.
+    default: op
+  dropspawner.reload:
+    description: Izin untuk melakukan reload konfigurasi plugin.
+    default: op
+  dropspawner.bypass:
+    description: Pemain dengan permission ini tidak akan memicu drop spawner saat membunuh mob.
+    default: false
+    
