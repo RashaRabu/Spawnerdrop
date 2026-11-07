@@ -11,7 +11,6 @@
 
     <name>Dropspawner</name>
     <description>Plugin Paper untuk drop item mob spawner saat mob dibunuh pemain.</description>
-    <url>https://mawi.my.id</url>
 
     <properties>
         <java.version>21</java.version>
@@ -20,15 +19,19 @@
     </properties>
 
     <repositories>
-        <!-- PaperMC Repository -->
         <repository>
             <id>papermc-repo</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- Paper API 26.x (Paper format baru: year.drop.hotfix) -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
