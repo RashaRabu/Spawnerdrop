@@ -1,0 +1,57 @@
+# ==========================================
+#      Dropspawner Config - Rabusoore
+# ==========================================
+
+item-settings:
+  # Waktu tunda sebelum item spawner dapat diambil pemain (dalam tick, 20 tick = 1 detik)
+  pickup-delay-ticks: 20
+  # Durasi item hanya bisa diambil oleh pembunuh (dalam detik). Set 0 untuk mematikan.
+  owner-only-seconds: 10
+  # Efek item menyala (glowing) saat di tanah
+  glow: true
+  sound:
+    enabled: true
+    type: ENTITY_ITEM_PICKUP
+    volume: 1.0
+    pitch: 1.2
+  particle:
+    enabled: true
+    type: VILLAGER_HAPPY
+    count: 15
+
+blacklist:
+  # Daftar mob yang tidak pernah menjatuhkan spawner
+  mobs:
+    - ENDER_DRAGON
+    - WITHER
+    - WARDEN
+    - ELDER_GUARDIAN
+    - GIANT
+    - ILLUSIONER
+  # Jenis spawner yang dilarang didapatkan (misal: dilarang mendapatkan spawner VILLAGER)
+  drop-types: []
+  # World tempat fitur drop dimatikan
+  worlds: []
+  # true = blacklist.worlds adalah world yang dilarang, false = whitelist.worlds (hanya world ini yang aktif)
+  world-blacklist-mode: true
+
+looting:
+  # Aktifkan statistik bonus Looting enchantment
+  enabled: true
+  # Tambahan persentase per level Looting (contoh: level 3 = +1.5%)
+  chance-per-level: 0.5
+  # Batas maksimum chance akhir setelah dihitung Looting (persen)
+  max-chance: 10.0
+
+messages:
+  prefix: "<gradient:#E76F51:#F4A261>[Dropspawner]</gradient> "
+  spawner-dropped: "<green>Kamu berhasil membuat spawner <yellow>{mob}</yellow> terlepas!</green>"
+  reload-success: "<green>Konfigurasi berhasil diperbarui dari disk!</green>"
+  no-permission: "<red>Kamu tidak memiliki izin untuk menjalankan perintah ini.</red>"
+  invalid-mob: "<red>Nama mob '{mob}' tidak valid atau tidak terdaftar.</red>"
+  mob-updated: "<green>Pengaturan untuk mob <yellow>{mob}</yellow> berhasil disimpan.</green>"
+  blacklist-updated: "<green>Daftar blacklist mob berhasil diperbarui!</green>"
+  info-header: "<gold>=== Info Drop Spawner: <yellow>{mob}</yellow> ===</gold>"
+  info-status: "<gray>Status Drop: <white>{status}</white></gray>"
+  info-chance: "<gray>Peluang Dasar: <white>{chance}%</white></gray>"
+  info-drop-type: "<gray>Tipe Spawner: <white>{type}</white></gray>"
