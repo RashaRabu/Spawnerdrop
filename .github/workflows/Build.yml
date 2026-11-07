@@ -22,7 +22,7 @@ jobs:
         cache: maven
 
     - name: Build Plugin dengan Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package -U --file pom.xml
 
     - name: Upload Artifact Jar Build
       uses: actions/upload-artifact@v4
