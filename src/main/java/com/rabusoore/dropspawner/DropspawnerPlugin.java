@@ -2,7 +2,9 @@ package com.rabusoore.dropspawner;
 
 import com.rabusoore.dropspawner.command.DropspawnerCommand;
 import com.rabusoore.dropspawner.config.ConfigManager;
+import com.rabusoore.dropspawner.listener.BlockPlaceListener;
 import com.rabusoore.dropspawner.listener.EntityDeathListener;
+import com.rabusoore.dropspawner.listener.InventoryListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DropspawnerPlugin extends JavaPlugin {
@@ -17,6 +19,8 @@ public final class DropspawnerPlugin extends JavaPlugin {
 
         // Registrasi Listener Event
         getServer().getPluginManager().registerEvents(new EntityDeathListener(this), this);
+        getServer().getPluginManager().registerEvents(new BlockPlaceListener(this), this);
+        getServer().getPluginManager().registerEvents(new InventoryListener(this), this); // <--- Tambahkan Listener ini
 
         // Registrasi Executor & TabCompleter Command
         DropspawnerCommand commandExecutor = new DropspawnerCommand(this);
