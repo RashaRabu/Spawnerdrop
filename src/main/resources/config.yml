@@ -3,12 +3,23 @@
 # ==========================================
 
 item-settings:
-  # Waktu tunda sebelum item spawner dapat diambil pemain (dalam tick, 20 tick = 1 detik)
+  item-settings:
   pickup-delay-ticks: 20
-  # Durasi item hanya bisa diambil oleh pembunuh (dalam detik). Set 0 untuk mematikan.
   owner-only-seconds: 10
-  # Efek item menyala (glowing) saat di tanah
   glow: true
+
+  # Kustomisasi Nama Item Spawner (Format MiniMessage / Color Code)
+  custom-name:
+    enabled: true
+    format: "<yellow><bold>{mob}</bold> Spawner</yellow>"
+
+  # Kustomisasi Lore Item Spawner
+  custom-lore:
+    enabled: true
+    lines:
+      - "<gray>Spawner khusus tipe <white>{mob}</white></gray>"
+      - "<dark_gray>Dapat ditaruh atau ditumpuk (SmartSpawner)</dark_gray>"
+
   sound:
     enabled: true
     type: ENTITY_ITEM_PICKUP
