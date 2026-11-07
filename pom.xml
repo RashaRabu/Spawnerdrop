@@ -28,17 +28,16 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
     </repositories>
 
     <dependencies>
-        <!-- Paper API Snapshot untuk versi 26.x -->
+        <!-- Paper API versi stabil untuk kompilasi Java 21 -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>26.1-R0.1-SNAPSHOT</version>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
